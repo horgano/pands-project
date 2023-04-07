@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 IRIS DATA SET SUMMARY
 
 - The Iris Data set or Fisher's Iris Data set is a multivariate data set introduce by British statitician, eugenicist, and biologist Ronald Fisher in 1936.
@@ -18,7 +17,3 @@ IRIS DATA SET SUMMARY
 
 - Based on the combination of these 4 features, Fisher developed a linear discriminant model to distinguish the species from each other.
 - 
-=======
-# pands-project
-Data analysis on iris data set
->>>>>>> 8928f33d7296a36a785c101f345ddae92e819f4a
