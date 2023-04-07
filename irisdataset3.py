@@ -9,9 +9,10 @@ import matplotlib.pyplot as plt
 x = []
 y = []
 
-with open('iris.csv','r') as csvfile:
+with open('irisdata.csv','r') as csvfile:
     plots = csv.reader(csvfile, delimiter = ',')
 
     for row in plots:
-        x.append(row[0])
+        x.append(row[1])
+        y.append(float(row[2]))
 print (x)

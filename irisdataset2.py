@@ -7,4 +7,10 @@ import pandas as pd
 df = pd.read_csv('iris.csv', header = None)
 array = df.to_numpy()
 
-print (array)
+iris_setosa = array[0:50]
+iris_versicolor = array[50:100]
+iris_virginica = array[100:150]
+
+number = 0
+
+print (iris_setosa)
