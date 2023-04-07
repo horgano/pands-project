@@ -1,3 +1,6 @@
+# test.py
+# my own testing to ensure each array had the correct amount of data
+
 import numpy as np
 import pandas as pd
 
