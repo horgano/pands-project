@@ -8,13 +8,19 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('iris.csv', header = None)
 array = df.to_numpy()
 
-iris_setosa = array[0:50]
+# separating the data by their Iris type
+iris_setosa = array[0:50] # includes 1st to 49th column
 iris_versicolor = array[50:100]
 iris_virginica = array[100:150]
 
+# all lengths in cm
+# arrayof all date in 1st column Petal Length
 iris_setosa_sepal_length = iris_setosa[:,0]
+# arrayof all date in 2nd column Petal Width
 iris_setosa_sepal_width = iris_setosa[:,1]
+# arrayof all date in 3rd column Sepal Length
 iris_setosa_petal_lenght = iris_setosa[:,2]
+# arrayof all date in 4th column Sepal Width
 iris_setosa_petal_width = iris_setosa[:,3]
 
 iris_versicolor_sepal_length = iris_versicolor[:,0]
@@ -36,8 +42,8 @@ plt.scatter (iris_setosa_sepal_length,iris_setosa_sepal_width, label = 'Setosa')
 plt.scatter (iris_versicolor_sepal_length,iris_versicolor_sepal_width, color = 'red', label = 'Versicolor')
 plt.scatter (iris_virginica_sepal_length,iris_virginica_sepal_width, color = 'green', label = 'Virginica')
 plt.title('Sepal Length x Sepal Width')
-plt.xlabel('Sepal Length')
-plt.ylabel('Sepal Width')
+plt.xlabel('Sepal Length cm')
+plt.ylabel('Sepal Width cm')
 plt.legend()
 plt.show()
 
