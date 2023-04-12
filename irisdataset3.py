@@ -12,6 +12,31 @@ iris_setosa = array[0:50] # includes 1st to 49th column
 iris_versicolor = array[50:100]
 iris_virginica = array[100:150]
 
+sepal_length = array[:,0]
+sepal_width = array[:,1]
+petal_length = array[:,2]
+petal_width = array[:,3]
+#print (f'Sepal Length: {sepal_length}')
+#print (sepal_width)
+#print (petal_length)
+#print (petal_width)
+
+plt.hist (sepal_length)
+plt.title(' Sepal Length (cm)')
+plt.show()
+
+plt.hist (sepal_width)
+plt.title('Sepal_Width (cm)')
+plt.show()
+
+plt.hist (petal_length)
+plt.title('Petal Length (cm)')
+plt.show()
+
+plt.hist (petal_width)
+plt.title('Petal Width (cm)')
+plt.show()
+
 # all lengths in cm
 # arrayof all date in 1st column Petal Length
 iris_setosa_sepal_length = iris_setosa[:,0]
@@ -35,12 +60,12 @@ iris_virginica_petal_width = iris_virginica[:,3]
 
 plt.hist (iris_setosa_sepal_length)
 plt.title('Iris Setosa Sepal Length (cm)')
-plt.show()
+#plt.show()
 
 plt.hist (iris_versicolor_sepal_length, color = 'red')
 plt.title('Iris Versicolor Sepal Length (cm)')
-plt.show()
+#plt.show()
 
 plt.hist (iris_virginica_sepal_length, color = 'green')
 plt.title('Iris Virginica Sepal Length (cm)')
-plt.show()
+#plt.show()
