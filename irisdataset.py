@@ -30,12 +30,16 @@ sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
 #print (sepal_length_max_full)
 #print (sepal_length_min_full)
 
-# Groups the mean values by Iris type
-mean_values = titled_df.groupby('Class').mean()
-print (f'\nMean values: {mean_values}')
-
+# Groups the max values by Iris type
 max_values = titled_df.groupby('Class').max()
-print (f'\nMax values: {max_values}')
+print (f'\nMax values:\n {max_values}')
+
+mean_values = titled_df.groupby('Class').mean()
+print (f'\nMean values:\n {mean_values}')
 
 min_values = titled_df.groupby('Class').min()
-print (f'\nMin values: {min_values}')
+print (f'\nMin values: \n{min_values}')
+
+
+standard_dev = titled_df.groupby('Class').std()
+print (f'\nStd Dev: \n{standard_dev}')
