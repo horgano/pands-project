@@ -113,21 +113,27 @@ plt.title(' Sepal Length (cm)', loc = 'left')
 # add horizontal line at mean value of  https://www.statology.org/matplotlib-average-line/
 # https://stackoverflow.com/questions/16930328/vertical-horizontal-lines-in-matplotlib
 plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.savefig('Sepal_Length_Histogram.png')
 plt.show()
 
 plt.hist (sepal_width)
-plt.title('Sepal_Width (cm)', loc = 'left')
+plt.title('Sepal Width (cm)', loc = 'left')
 plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.savefig('Sepal_Width_Histogram.png')
 plt.show()
+
 
 plt.hist (petal_length)
 plt.title('Petal Length (cm)', loc = 'left')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.savefig('Petal_Length_Histogram.png')
 plt.show()
+
 
 plt.hist (petal_width)
 plt.title('Petal Width (cm)', loc = 'left')
 plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.savefig('Petal_Width_Histogram.png')
 plt.show()
 
 # all lengths in cm
@@ -150,12 +156,15 @@ iris_virginica_petal_width = iris_virginica[:,3]
 
 plt.hist (iris_setosa_sepal_length)
 plt.title('Iris Setosa Sepal Length (cm)')
-#plt.show()
+plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.show()
 
 plt.hist (iris_versicolor_sepal_length, color = 'red')
 plt.title('Iris Versicolor Sepal Length (cm)')
-#plt.show()
+plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.show()
 
 plt.hist (iris_virginica_sepal_length, color = 'green')
 plt.title('Iris Virginica Sepal Length (cm)')
-#plt.show()
+plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.show()

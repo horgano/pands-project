@@ -3,8 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 import time
-from irisdataset2.py import *
-
 
 # https://blog.finxter.com/how-to-convert-a-csv-to-numpy-array-in-python/#:~:text=A%20quick%20and%20efficient%20way,DataFrame%20to%20a%20NumPy%20array.
 # arrange data in numpy array
@@ -27,8 +25,9 @@ petal_width = array[:,3]
 
 plt.hist (sepal_length)
 plt.title(' Sepal Length (cm)')
-plt.axhline(y=sepal_length_mean_full, color = 'red')
 plt.show()
+
+
 
 plt.hist (sepal_width)
 plt.title('Sepal_Width (cm)')
@@ -61,14 +60,16 @@ iris_virginica_petal_lenght = iris_virginica[:,2]
 iris_virginica_petal_width = iris_virginica[:,3]
 
 
-plt.hist (iris_setosa_sepal_length)
+plt.hist (iris_setosa_sepal_length, alpha = 0.2)
+plt.hist (iris_versicolor_sepal_length, color = 'red', alpha = 0.6)
+plt.hist (iris_virginica_sepal_length, color = 'green', alpha = 0.3)
 plt.title('Iris Setosa Sepal Length (cm)')
+plt.show()
+
+#plt.hist (iris_versicolor_sepal_length, color = 'red')
+#plt.title('Iris Versicolor Sepal Length (cm)')
 #plt.show()
 
-plt.hist (iris_versicolor_sepal_length, color = 'red')
-plt.title('Iris Versicolor Sepal Length (cm)')
-#plt.show()
-
-plt.hist (iris_virginica_sepal_length, color = 'green')
-plt.title('Iris Virginica Sepal Length (cm)')
+#plt.hist (iris_virginica_sepal_length, color = 'green')
+#plt.title('Iris Virginica Sepal Length (cm)')
 #plt.show()
