@@ -1,6 +1,10 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import math
+import time
+from irisdataset2.py import *
+
 
 # https://blog.finxter.com/how-to-convert-a-csv-to-numpy-array-in-python/#:~:text=A%20quick%20and%20efficient%20way,DataFrame%20to%20a%20NumPy%20array.
 # arrange data in numpy array
@@ -23,6 +27,7 @@ petal_width = array[:,3]
 
 plt.hist (sepal_length)
 plt.title(' Sepal Length (cm)')
+plt.axhline(y=sepal_length_mean_full, color = 'red')
 plt.show()
 
 plt.hist (sepal_width)
@@ -38,13 +43,11 @@ plt.title('Petal Width (cm)')
 plt.show()
 
 # all lengths in cm
-# arrayof all date in 1st column Petal Length
+# arrays of all data in 1st column Petal Length, 2nd column Petal Width,
+# 3rd column Sepal Length, and 4th Sepal Width
 iris_setosa_sepal_length = iris_setosa[:,0]
-# arrayof all date in 2nd column Petal Width
 iris_setosa_sepal_width = iris_setosa[:,1]
-# arrayof all date in 3rd column Sepal Length
 iris_setosa_petal_lenght = iris_setosa[:,2]
-# arrayof all date in 4th column Sepal Width
 iris_setosa_petal_width = iris_setosa[:,3]
 
 iris_versicolor_sepal_length = iris_versicolor[:,0]
