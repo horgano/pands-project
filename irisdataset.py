@@ -48,3 +48,12 @@ time.sleep(2)
 standard_dev = titled_df.groupby('Class').std()
 print (f'\nStd Dev: \n{standard_dev}')
 time.sleep(2)
+
+FILENAME = 'analysis.txt'
+
+with open(FILENAME, 'w') as f:
+    f.write(f'Maximum values:\n {max_values}\n')
+    f.write(f'\nMean values:\n {mean_values}\n')
+    f.write(f'\nOverall Sepal length mean is: {sepal_length_mean_full}\n')
+    f.write(f'\nMin values: \n{min_values}\n')
+    f.write(f'\nStd Dev: \n{standard_dev}\n')
