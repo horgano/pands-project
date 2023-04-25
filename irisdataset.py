@@ -49,6 +49,8 @@ standard_dev = titled_df.groupby('Class').std()
 print (f'\nStd Dev: \n{standard_dev}')
 time.sleep(2)
 
+
+# https://www.pythontutorial.net/python-basics/python-write-text-file/
 FILENAME = 'analysis.txt'
 
 with open(FILENAME, 'w') as f:
