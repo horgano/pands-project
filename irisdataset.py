@@ -24,22 +24,33 @@ correlation = titled_df.corr()
 print (correlation)
 time.sleep(2)
 
+
+mean_values = titled_df.groupby('Class').mean()
+print (f'\nMean values:\n {mean_values}')
+time.sleep(2)
+
 # https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html
 sepal_length_mean_full = titled_df["Sepal Length(cm)"].mean()
 sepal_length_max_full = titled_df["Sepal Length(cm)"].max()
 sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
-print (f'Sepal length mean is: {sepal_length_mean_full}')
+print (f'Overall Sepal length mean is: {sepal_length_mean_full}')
 #print (sepal_length_max_full)
 #print (sepal_length_min_full)
+
+sepal_width_mean_full = titled_df["Sepal Width(cm)"].mean()
+print (sepal_width_mean_full)
+
+petal_length_mean_full = titled_df["Petal Length(cm)"].mean()
+petal_width_mean_full = titled_df["Petal Width(cm)"].mean()
+print (petal_length_mean_full)
+print (petal_width_mean_full)
 
 # Groups the max values by Iris type
 max_values = titled_df.groupby('Class').max()
 print (f'\nMax values:\n {max_values}')
 time.sleep(2)
 
-mean_values = titled_df.groupby('Class').mean()
-print (f'\nMean values:\n {mean_values}')
-time.sleep(2)
+
 
 min_values = titled_df.groupby('Class').min()
 print (f'\nMin values: \n{min_values}')
