@@ -6,14 +6,13 @@ Iris-setosa                 5.006            3.418             1.464            
 Iris-versicolor             5.936            2.770             4.260            1.326
 Iris-virginica              6.588            2.974             5.552            2.026
 
-Overall Sepal length mean is: 5.84
+Overall Sepal length mean is: 5.843333333333335
 
-Overall Sepal width mean is: 3.05
+Overall Sepal width mean is: 3.0540000000000007
 
-Overall Petal length mean is: 3.76
+Overall Petal length mean is: 3.7586666666666693
 
-Overall Petal width mean is: 1.2
-
+Overall Petal width mean is: 1.1986666666666672
 Maximum values:
                   Sepal Length(cm)  Sepal Width(cm)  Petal Length(cm)  Petal Width(cm)
 Class                                                                                

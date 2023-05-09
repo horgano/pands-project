@@ -16,16 +16,6 @@ array = df.to_numpy()
 # add headers to that csv file and make new data frame
 titled_df = pd.read_csv('iris.csv', names = ["Sepal Length(cm)","Sepal Width(cm)","Petal Length(cm)","Petal Width(cm)","Class"])
 
-
-
-# https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html
-sepal_length_mean_full = titled_df["Sepal Length(cm)"].mean()
-sepal_length_max_full = titled_df["Sepal Length(cm)"].max()
-sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
-#print (f'Sepal length mean is: {sepal_length_mean_full}')
-#print (sepal_length_max_full)
-#print (sepal_length_min_full)
-
 # separating the data by their Iris type
 iris_setosa = array[0:50] # includes 1st to 49th column
 iris_versicolor = array[50:100]
@@ -49,10 +39,10 @@ iris_virginica_sepal_width = iris_virginica[:,1]
 iris_virginica_petal_length = iris_virginica[:,2]
 iris_virginica_petal_width = iris_virginica[:,3]
 
-#print (iris_setosa_sepal_length)
-#print (iris_setosa_sepal_width)
-#print (iris_setosa_petal_lenght)
-#print (iris_setosa_petal_width)
+# https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html
+sepal_length_mean_full = titled_df["Sepal Length(cm)"].mean()
+sepal_length_max_full = titled_df["Sepal Length(cm)"].max()
+sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
 
 plt.scatter (iris_setosa_sepal_length,iris_setosa_sepal_width, label = 'Setosa')
 plt.scatter (iris_versicolor_sepal_length,iris_versicolor_sepal_width, color = 'red', label = 'Versicolor')
@@ -81,18 +71,11 @@ sepal_length = array[:,0]
 sepal_width = array[:,1]
 petal_length = array[:,2]
 petal_width = array[:,3]
-#print (f'Sepal Length: {sepal_length}')
-#print (sepal_width)
-#print (petal_length)
-#print (petal_width)
 
 # https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html
 sepal_length_mean_full = titled_df["Sepal Length(cm)"].mean()
 sepal_length_max_full = titled_df["Sepal Length(cm)"].max()
 sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
-#print (f'Sepal length mean is: {sepal_length_mean_full}')
-#print (sepal_length_max_full)
-#print (sepal_length_min_full)
 
 sepal_width_mean_full = titled_df["Sepal Width(cm)"].mean()
 sepal_width_max_full = titled_df["Sepal Width(cm)"].max()
@@ -120,13 +103,11 @@ plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label 
 plt.savefig('Sepal_Width_Histogram.png')
 plt.show()
 
-
 plt.hist (petal_length)
 plt.title('Petal Length (cm)', loc = 'left')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.savefig('Petal_Length_Histogram.png')
 plt.show()
-
 
 plt.hist (petal_width)
 plt.title('Petal Width (cm)', loc = 'left')
@@ -156,62 +137,107 @@ plt.hist (iris_setosa_sepal_length, color = "yellow")
 plt.title('Iris Setosa Sepal Length (cm)')
 plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Setosa Sepal Length (cm).png')
 
 plt.hist (iris_setosa_sepal_width, color = "yellow")
 plt.title('Iris Setosa Sepal Width (cm)')
 plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Setosa Sepal Width (cm).png')
 
 plt.hist (iris_setosa_petal_length, color = "yellow")
 plt.title('Iris Setosa Petal Length (cm)')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Setosa Petal Length (cm).png')
 
 plt.hist (iris_setosa_petal_width, color = "yellow")
 plt.title('Iris Setosa Petal Width (cm)')
 plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Setosa Petal Width (cm).png')
 
 plt.hist (iris_versicolor_sepal_length, color = 'red')
 plt.title('Iris Versicolor Sepal Length (cm)')
-plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
+plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Versicolor Sepal Length (cm).png')
 
 plt.hist (iris_versicolor_sepal_width, color = 'red')
 plt.title('Iris Versicolor Sepal Width (cm)')
-plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
+plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Versicolor Sepal Width (cm).png')
 
 plt.hist (iris_versicolor_petal_length, color = 'red')
 plt.title('Iris Versicolor Petal Length (cm)')
-plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
+plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Versicolor Petal Length (cm).png')
 
-plt.hist (iris_versicolor_petal_length, color = 'red')
-plt.title('Iris Versicolor Petal Length (cm)')
-plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
+plt.hist (iris_versicolor_petal_width, color = 'red')
+plt.title('Iris Versicolor Petal width (cm)')
+plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Versicolor Petal width (cm).png')
 
 plt.hist (iris_virginica_sepal_length, color = 'green')
 plt.title('Iris Virginica Sepal Length (cm)')
-plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
+plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Virginica Sepal Length (cm).png')
 
 plt.hist (iris_virginica_sepal_width, color = 'green')
 plt.title('Iris Virginica Sepal Width (cm)')
-plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
+plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Virginica Sepal Width (cm).png')
 
 plt.hist (iris_virginica_petal_length, color = 'green')
 plt.title('Iris Virginica Petal Length (cm)')
-plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
+plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Virginica Petal Length (cm).png')
 
 plt.hist (iris_virginica_petal_width, color = 'green')
 plt.title('Iris Virginica Petal Width (cm)')
-plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
+plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
+plt.savefig('Iris Virginica Petal Width (cm).png')
 
 correlation = titled_df.corr()
-print (f'Correlation data for Iris Data Set:\n{correlation}')
-time.sleep(2)
+
+mean_values = titled_df.groupby('Class').mean()
+
+sepal_width_mean_full = titled_df["Sepal Width(cm)"].mean()
+petal_length_mean_full = titled_df["Petal Length(cm)"].mean()
+petal_width_mean_full = titled_df["Petal Width(cm)"].mean()
+
+# Groups the max values by Iris type
+max_values = titled_df.groupby('Class').max()
+
+# Group by min values
+min_values = titled_df.groupby('Class').min()
+
+# Group by Standard Dev
+standard_dev = titled_df.groupby('Class').std()
+
+# https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html
+sepal_length_mean_full = titled_df["Sepal Length(cm)"].mean()
+sepal_length_max_full = titled_df["Sepal Length(cm)"].max()
+sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
+#print (f'Overall Sepal length mean is: {round(sepal_length_mean_full,2)}')
+
+# https://www.pythontutorial.net/python-basics/python-write-text-file/
+FILENAME = 'analysis.txt'
+
+with open(FILENAME, 'w') as f:
+    f.write(f'\nMean values:\n {mean_values}\n')
+    f.write(f'\nOverall Sepal length mean is: {round(sepal_length_mean_full,2)}\n')
+    f.write(f'\nOverall Sepal width mean is: {round(sepal_width_mean_full,2)}\n')
+    f.write(f'\nOverall Petal length mean is: {round(petal_length_mean_full,2)}\n')
+    f.write(f'\nOverall Petal width mean is: {round(petal_width_mean_full,2)}\n')
+    f.write(f'\nMaximum values:\n {max_values}\n')
+    f.write(f'\nMin values: \n{min_values}\n')
+    f.write(f'\nStd Dev: \n{standard_dev}\n')
+    f.write(f'\nCorrelation data for Iris Data Set:\n{correlation}')
