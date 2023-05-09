@@ -16,9 +16,7 @@ array = df.to_numpy()
 # add headers to that csv file and make new data frame
 titled_df = pd.read_csv('iris.csv', names = ["Sepal Length(cm)","Sepal Width(cm)","Petal Length(cm)","Petal Width(cm)","Class"])
 
-correlation = titled_df.corr()
-print (f'Correlation data for Iris Data Set:\n{correlation}')
-time.sleep(2)
+
 
 # https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html
 sepal_length_mean_full = titled_df["Sepal Length(cm)"].mean()
@@ -38,17 +36,17 @@ iris_virginica = array[100:150]
 # 3rd column Sepal Length, and 4th Sepal Width
 iris_setosa_sepal_length = iris_setosa[:,0]
 iris_setosa_sepal_width = iris_setosa[:,1]
-iris_setosa_petal_lenght = iris_setosa[:,2]
+iris_setosa_petal_length = iris_setosa[:,2]
 iris_setosa_petal_width = iris_setosa[:,3]
 
 iris_versicolor_sepal_length = iris_versicolor[:,0]
 iris_versicolor_sepal_width = iris_versicolor[:,1]
-iris_versicolor_petal_lenght = iris_versicolor[:,2]
+iris_versicolor_petal_length = iris_versicolor[:,2]
 iris_versicolor_petal_width = iris_versicolor[:,3]
 
 iris_virginica_sepal_length = iris_virginica[:,0]
 iris_virginica_sepal_width = iris_virginica[:,1]
-iris_virginica_petal_lenght = iris_virginica[:,2]
+iris_virginica_petal_length = iris_virginica[:,2]
 iris_virginica_petal_width = iris_virginica[:,3]
 
 #print (iris_setosa_sepal_length)
@@ -65,9 +63,9 @@ plt.ylabel('Sepal Width cm')
 plt.legend()
 plt.show()
 
-plt.scatter (iris_setosa_petal_lenght, iris_setosa_petal_width, label = 'Setosa')
-plt.scatter (iris_versicolor_petal_lenght, iris_versicolor_petal_width, color = 'red', label = 'Versicolor')
-plt.scatter (iris_virginica_petal_lenght, iris_virginica_petal_width, color = 'green', label = 'Virginica')
+plt.scatter (iris_setosa_petal_length, iris_setosa_petal_width, label = 'Setosa')
+plt.scatter (iris_versicolor_petal_length, iris_versicolor_petal_width, color = 'red', label = 'Versicolor')
+plt.scatter (iris_virginica_petal_length, iris_virginica_petal_width, color = 'green', label = 'Virginica')
 plt.title('Petal Length x Petal Width')
 plt.xlabel('Petal Length')
 plt.ylabel('Petal Width')
@@ -154,17 +152,66 @@ iris_virginica_sepal_width = iris_virginica[:,1]
 iris_virginica_petal_lenght = iris_virginica[:,2]
 iris_virginica_petal_width = iris_virginica[:,3]
 
-plt.hist (iris_setosa_sepal_length)
+plt.hist (iris_setosa_sepal_length, color = "yellow")
 plt.title('Iris Setosa Sepal Length (cm)')
 plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
 
+plt.hist (iris_setosa_sepal_width, color = "yellow")
+plt.title('Iris Setosa Sepal Width (cm)')
+plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.show()
+
+plt.hist (iris_setosa_petal_length, color = "yellow")
+plt.title('Iris Setosa Petal Length (cm)')
+plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.show()
+
+plt.hist (iris_setosa_petal_width, color = "yellow")
+plt.title('Iris Setosa Petal Width (cm)')
+plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.show()
+
 plt.hist (iris_versicolor_sepal_length, color = 'red')
 plt.title('Iris Versicolor Sepal Length (cm)')
-plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
+plt.show()
+
+plt.hist (iris_versicolor_sepal_width, color = 'red')
+plt.title('Iris Versicolor Sepal Width (cm)')
+plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
+plt.show()
+
+plt.hist (iris_versicolor_petal_length, color = 'red')
+plt.title('Iris Versicolor Petal Length (cm)')
+plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
+plt.show()
+
+plt.hist (iris_versicolor_petal_length, color = 'red')
+plt.title('Iris Versicolor Petal Length (cm)')
+plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'green', label = 'Average' )
 plt.show()
 
 plt.hist (iris_virginica_sepal_length, color = 'green')
 plt.title('Iris Virginica Sepal Length (cm)')
-plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
+plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
 plt.show()
+
+plt.hist (iris_virginica_sepal_width, color = 'green')
+plt.title('Iris Virginica Sepal Width (cm)')
+plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
+plt.show()
+
+plt.hist (iris_virginica_petal_length, color = 'green')
+plt.title('Iris Virginica Petal Length (cm)')
+plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
+plt.show()
+
+plt.hist (iris_virginica_petal_width, color = 'green')
+plt.title('Iris Virginica Petal Width (cm)')
+plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'yellow', label = 'Average' )
+plt.show()
+
+correlation = titled_df.corr()
+print (f'Correlation data for Iris Data Set:\n{correlation}')
+time.sleep(2)
