@@ -44,6 +44,7 @@ sepal_length_mean_full = titled_df["Sepal Length(cm)"].mean()
 sepal_length_max_full = titled_df["Sepal Length(cm)"].max()
 sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
 
+# creat scatter plot #1 Sepal length x Sepal width for the 3 classes
 plt.scatter (iris_setosa_sepal_length,iris_setosa_sepal_width, label = 'Setosa')
 plt.scatter (iris_versicolor_sepal_length,iris_versicolor_sepal_width, color = 'red', label = 'Versicolor')
 plt.scatter (iris_virginica_sepal_length,iris_virginica_sepal_width, color = 'green', label = 'Virginica')
@@ -53,6 +54,7 @@ plt.ylabel('Sepal Width cm')
 plt.legend()
 plt.show()
 
+# creat scatter plot #1 Petal length x Petal width for the 3 classes
 plt.scatter (iris_setosa_petal_length, iris_setosa_petal_width, label = 'Setosa')
 plt.scatter (iris_versicolor_petal_length, iris_versicolor_petal_width, color = 'red', label = 'Versicolor')
 plt.scatter (iris_virginica_petal_length, iris_virginica_petal_width, color = 'green', label = 'Virginica')
@@ -89,6 +91,7 @@ petal_width_mean_full = titled_df["Petal Width(cm)"].mean()
 petal_width_max_full = titled_df["Petal Width(cm)"].max()
 petal_width_min_full = titled_df["Petal Width(cm)"].min()
 
+# creat histograms for #1 Sepal lenght full
 plt.hist (sepal_length)
 plt.title(' Sepal Length (cm)', loc = 'left')
 # add horizontal line at mean value of  https://www.statology.org/matplotlib-average-line/
@@ -97,18 +100,21 @@ plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label
 plt.savefig('Sepal_Length_Histogram.png')
 plt.show()
 
+#2 Speal width
 plt.hist (sepal_width)
 plt.title('Sepal Width (cm)', loc = 'left')
 plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.savefig('Sepal_Width_Histogram.png')
 plt.show()
 
+#3 Petal length
 plt.hist (petal_length)
 plt.title('Petal Length (cm)', loc = 'left')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.savefig('Petal_Length_Histogram.png')
 plt.show()
 
+#4 Petal Width
 plt.hist (petal_width)
 plt.title('Petal Width (cm)', loc = 'left')
 plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
@@ -117,7 +123,7 @@ plt.show()
 
 # all lengths in cm
 # arrays of all data in 1st column Petal Length, 2nd column Petal Width,
-# 3rd column Sepal Length, and 4th Sepal Width
+# 3rd column Sepal Length, and 4th Sepal Width for each class
 iris_setosa_sepal_length = iris_setosa[:,0]
 iris_setosa_sepal_width = iris_setosa[:,1]
 iris_setosa_petal_lenght = iris_setosa[:,2]
@@ -205,6 +211,7 @@ plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label 
 plt.show()
 plt.savefig('Iris Virginica Petal Width (cm).png')
 
+# create correlation table for irisdataset
 correlation = titled_df.corr()
 
 mean_values = titled_df.groupby('Class').mean()
@@ -231,6 +238,7 @@ sepal_length_min_full = titled_df["Sepal Length(cm)"].min()
 # https://www.pythontutorial.net/python-basics/python-write-text-file/
 FILENAME = 'analysis.txt'
 
+# Outputs the following info to a textfile for reading
 with open(FILENAME, 'w') as f:
     f.write(f'\nMean values:\n {mean_values}\n')
     f.write(f'\nOverall Sepal length mean is: {round(sepal_length_mean_full,2)}\n')
