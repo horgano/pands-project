@@ -53,6 +53,7 @@ plt.xlabel('Sepal Length cm')
 plt.ylabel('Sepal Width cm')
 plt.legend()
 plt.show()
+plt.savefig('A.Scatter.png')
 
 # creat scatter plot #1 Petal length x Petal width for the 3 classes
 plt.scatter (iris_setosa_petal_length, iris_setosa_petal_width, label = 'Setosa')
@@ -63,6 +64,7 @@ plt.xlabel('Petal Length')
 plt.ylabel('Petal Width')
 plt.legend()
 plt.show()
+plt.savefig('B.Scatter.png')
 
 # separating the data by their Iris type
 iris_setosa = array[0:50] # includes 1st to 49th column
@@ -93,32 +95,32 @@ petal_width_min_full = titled_df["Petal Width(cm)"].min()
 
 # creat histograms for #1 Sepal lenght full
 plt.hist (sepal_length)
-plt.title(' Sepal Length (cm)', loc = 'left')
+plt.title('Sepal Length (cm)', loc = 'left')
 # add horizontal line at mean value of  https://www.statology.org/matplotlib-average-line/
 # https://stackoverflow.com/questions/16930328/vertical-horizontal-lines-in-matplotlib
 plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
-plt.savefig('Sepal_Length_Histogram.png')
+plt.savefig('1.Sepal_Length_Histogram.png')
 plt.show()
 
 #2 Speal width
 plt.hist (sepal_width)
 plt.title('Sepal Width (cm)', loc = 'left')
 plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
-plt.savefig('Sepal_Width_Histogram.png')
+plt.savefig('2.Sepal_Width_Histogram.png')
 plt.show()
 
 #3 Petal length
 plt.hist (petal_length)
 plt.title('Petal Length (cm)', loc = 'left')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
-plt.savefig('Petal_Length_Histogram.png')
+plt.savefig('3.Petal_Length_Histogram.png')
 plt.show()
 
 #4 Petal Width
 plt.hist (petal_width)
 plt.title('Petal Width (cm)', loc = 'left')
 plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
-plt.savefig('Petal_Width_Histogram.png')
+plt.savefig('4.Petal_Width_Histogram.png')
 plt.show()
 
 # all lengths in cm
@@ -143,73 +145,73 @@ plt.hist (iris_setosa_sepal_length, color = "yellow")
 plt.title('Iris Setosa Sepal Length (cm)')
 plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Setosa Sepal Length (cm).png')
+plt.savefig('5.Iris Setosa Sepal Length (cm).png')
 
 plt.hist (iris_setosa_sepal_width, color = "yellow")
 plt.title('Iris Setosa Sepal Width (cm)')
 plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Setosa Sepal Width (cm).png')
+plt.savefig('6.Iris Setosa Sepal Width (cm).png')
 
 plt.hist (iris_setosa_petal_length, color = "yellow")
 plt.title('Iris Setosa Petal Length (cm)')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Setosa Petal Length (cm).png')
+plt.savefig('7.Iris Setosa Petal Length (cm).png')
 
 plt.hist (iris_setosa_petal_width, color = "yellow")
 plt.title('Iris Setosa Petal Width (cm)')
 plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Setosa Petal Width (cm).png')
+plt.savefig('8.Iris Setosa Petal Width (cm).png')
 
 plt.hist (iris_versicolor_sepal_length, color = 'red')
 plt.title('Iris Versicolor Sepal Length (cm)')
 plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Versicolor Sepal Length (cm).png')
+plt.savefig('9.Iris Versicolor Sepal Length (cm).png')
 
 plt.hist (iris_versicolor_sepal_width, color = 'red')
 plt.title('Iris Versicolor Sepal Width (cm)')
 plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Versicolor Sepal Width (cm).png')
+plt.savefig('10.Iris Versicolor Sepal Width (cm).png')
 
 plt.hist (iris_versicolor_petal_length, color = 'red')
 plt.title('Iris Versicolor Petal Length (cm)')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Versicolor Petal Length (cm).png')
+plt.savefig('11.Iris Versicolor Petal Length (cm).png')
 
 plt.hist (iris_versicolor_petal_width, color = 'red')
 plt.title('Iris Versicolor Petal width (cm)')
 plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Versicolor Petal width (cm).png')
+plt.savefig('12.Iris Versicolor Petal width (cm).png')
 
 plt.hist (iris_virginica_sepal_length, color = 'green')
 plt.title('Iris Virginica Sepal Length (cm)')
 plt.axvline(x=sepal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Virginica Sepal Length (cm).png')
+plt.savefig('13.Iris Virginica Sepal Length (cm).png')
 
 plt.hist (iris_virginica_sepal_width, color = 'green')
 plt.title('Iris Virginica Sepal Width (cm)')
 plt.axvline(x=sepal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Virginica Sepal Width (cm).png')
+plt.savefig('14.Iris Virginica Sepal Width (cm).png')
 
 plt.hist (iris_virginica_petal_length, color = 'green')
 plt.title('Iris Virginica Petal Length (cm)')
 plt.axvline(x=petal_length_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Virginica Petal Length (cm).png')
+plt.savefig('15.Iris Virginica Petal Length (cm).png')
 
 plt.hist (iris_virginica_petal_width, color = 'green')
 plt.title('Iris Virginica Petal Width (cm)')
 plt.axvline(x=petal_width_mean_full, linestyle = 'dotted', color = 'red', label = 'Average' )
 plt.show()
-plt.savefig('Iris Virginica Petal Width (cm).png')
+plt.savefig('16.Iris Virginica Petal Width (cm).png')
 
 # create correlation table for irisdataset
 correlation = titled_df.corr()
