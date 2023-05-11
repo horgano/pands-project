@@ -90,7 +90,14 @@ Correlation:
 - -1 = extremely negative (1 increases, the otger decreases)
  
 
+# _Interesting Analyses:_
 
+- 1: British Statistician Ronald Fishers originally introduced by the Iris Data Set in his 1936 Paper "The use of multiple measurements in taxonomic problems". He used the dataset to demonstrate the effectiveness of Linear Discriminant Analysis for classifying the iris' based on the 4 Classes.
+- 2: Sometimes called the Anderson dataset as DR Edgar Anderson is credited with collecting the majority of the data for the set.
+- 3: In a 1953 paper Ronald Fisher and Michael Powell demonstrated the significant variation within each species of Iris but also that the differences were significant.
+- 4: Robert Sokal and James Rolf in their 1956 book used the dataset to illustrate hierarchical clustering techniques. 
+- 5: Modernly used in machine learning
+- https://towardsdatascience.com/the-iris-dataset-a-little-bit-of-history-and-biology-fb4812f5a7b5
 
 # REFERENCES:
  https://blog.finxter.com/how-to-convert-a-csv-to-numpy-array-in-python/#:~:text=A%20quick%20and%20efficient%20way,DataFrame%20to%20a%20NumPy%20array.
