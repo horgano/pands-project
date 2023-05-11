@@ -58,15 +58,16 @@ Using the various arrays I was able to get staistics like Mean, Min, MAX, Std De
 
 ### A.Scatter: Sepal length x Sepal Width:
  Here we see that the Setosa Sepal is clearly distinguished and stand out from Versicolor and Virginica. Its shorter and wider sepals makes it stand alone vs the others. There is alot of over lap between Versicolor and Virginica, with the formers shorter Sepal length making it more recognisable from the latters longer Sepals. Both their widths are similar.
+But both Versicolor and Virginica are obviosly the longer narrower vs Setosa
 
 ### B.Scatter: Petal length x Petal Width:
-If the first Scatter was in any doubt of the individualism of the Iris Setosa this scatter plot clearly shows how stand out the Setosa is asits Petal length and width are miniscule vs the others. And clearly so. In this scatter there is more clear divide between the 3. Setosa has smallest length and width by far, and with a big gap to Versicolor in the middle with length and width of its Petals. Witonly a tiny bit of over lap we have a clear winner for Petal length and width with Virginica.
+If the first Scatter was in any doubt of the individualism of the Iris Setosa this scatter plot clearly shows how stand out the Setosa is asits Petal length and width are miniscule vs the others. And clearly so. In this scatter there is more clear divide between the 3. Setosa has smallest length and width by far beibg polar opposite to its Sepal dimsension, and with a big gap to Versicolor in the middle with length and width of its Petals. With only a tiny bit of over lap we have a clear winner for Petal length and width with Virginica. Both of these having the longer length of a Petal as well as Sepal.
 
 ### Histogram 1-4:
-Whilst the overall Sepal length and Sepal width give us more of a standard distributon of the overall set, they are nothing like the distribution of Petal length and Petal width whch are totally skewed by the Setosa dimensions.
+Whilst the overall Sepal length and Sepal width give us more of a standard distributon of the overall set, they are nothing like the distribution of Petal length and Petal width whch are totally skewed by the Setosas smaller dimensions.
 
 ### Histogram 5-8:
-All 4 graphs show a standard distribution fomr Setosa but all well below the average of the overall
+All 4 graphs show a standard distribution for Setosa but all well below the average of the overall
 
 ### Histogram 9-12:
 Versicolors data is a mix of above and below averages
