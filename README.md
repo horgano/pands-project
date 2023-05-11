@@ -21,9 +21,15 @@
 
 analysis.py is code written in python programming language. Simply run analysis.py in your terminal with the command 'python analysis.py'
 
-The program takes input from csv file iris.csv. This csv file has no headings so one of my first tasks was to add the Sepal length, Sepal width, Petal length, Petal width headings to the file.
+The program takes input from csv file iris.csv. This csv file has no headings (its how I started so its how I continued as I did find a title headed dataset but was surplus to requirements as I was able to put titles on the original csv file) so one of my first tasks was to add the Sepal length, Sepal width, Petal length, Petal width headings to the file.
 
-Also firstly, I split the info from the csv file into arrays so that I could present the info in graphs and do analysis of each class array and variable arrays.
+Secondly, I split the info from the csv file into arrays so that I could present the info in graphs and do analysis of each class array and variable arrays.
+
+Scatter plots were created(and saved  as png files)comparing each of Classes in Sepal Length and width, and also Petal length and width. In these plots we are able tosee how they differ or are alike.
+
+Histograms were created and saved as png files numbered as below. In each Histogram we are able to see the standard distribution of each individual Class by each of their variables compared to the over average of each variable.
+
+Using the various arrays I was able to get staistics like Mean, Min, MAX, Std Deviation, and correlation data on each. This will be output to a text file as the program is run.
 
 ## _Scatterplots:_
 - 1  Sepal length x Sepal width: 3 Classes
@@ -47,7 +53,6 @@ Also firstly, I split the info from the csv file into arrays so that I could pre
 - 15 Petal length (Virginica)
 - 16 Petal Width (Virginica)
 
-Lastly, analysis in the form of Iris data mean, min & max values as well as correlation an standard deviation values are out put to text file analysis.txt
 
 # Summary of Data Analysis on Iris Data Set
 
@@ -67,7 +72,7 @@ All 4 graphs show a standard distribution fomr Setosa but all well below the ave
 Versicolors data is a mix of above and below averages
 
 ### Histogram 13-16
-Virginica is cleary well above average distributin for Petal dimensions
+Virginica is cleary well above average distribution for each Petal dimension.
 
 ### analysis.txt:
 The outstanding info from Mean values is not only the Setosa with its extremely small Petals, but also the fact that there is also a massive difference between its length and width. In contrast its Sepal width is above average having a higher mean than the other 2. This is the only factor that its has the larger value.
@@ -88,6 +93,7 @@ Correlation:
 - 0 = having no correlation between 2 variables.
 - 1 = extremely positive (1 increases, the other increases)
 - -1 = extremely negative (1 increases, the otger decreases)
+- The strongest correlation was between Petal length and width. Foloowed closely by both of these ralationship with Sepal length. Sepal width actually had a negative correlation with all other variables and to be expected the stronger of these 2 were the Petal variables, but not very strong in the overall sense of the word.
  
 
 # _Interesting Analyses:_
